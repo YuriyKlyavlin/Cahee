@@ -241,10 +241,16 @@ li {
 			justify-content: space-between;
 			flex-wrap: wrap;
 			margin-bottom: 20px;
-			& img {
-				margin-bottom: 33px;
-				box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
-				display: block;
+			&-link {
+				& img {
+					margin-bottom: 33px;
+					box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+					display: block;
+					transition: box-shadow .1s linear;
+					&:hover {
+						box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
+					}
+				}
 			}
 		}
 		& .btn {
@@ -333,47 +339,55 @@ li {
 			justify-content: space-between;
 			flex-wrap: nowrap;
 			margin-bottom: 50px;
-			&-item {
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center;
-				width: 370px; height: 310px;
-				padding: 0 20px;
-				position: relative;
-				& .item-date {
-					position: absolute;
-					width: 60px; height: 60px;
-					left: 30px; top: 30px;
-					border-radius: 5px;
-					background: rgba(0, 0, 0, .5);
-					font: 900 21px/1.1 Raleway, Arial, sans-serif;
-					text-transform: uppercase;
-					color: #fff;
-					text-align: center;
-					padding-top: 4px;
-					& span {
-						font: 700 32px/.78 Raleway, Arial, sans-serif;
+			&-link {
+				& .blog__block-item {
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+					width: 370px; height: 310px;
+					padding: 0 20px;
+					position: relative;
+					box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+					transition: box-shadow .1s linear;
+					&:hover {
+						box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
+					}
+					& .item-date {
+						position: absolute;
+						width: 60px; height: 60px;
+						left: 30px; top: 30px;
+						border-radius: 5px;
+						background: rgba(0, 0, 0, .5);
+						font: 900 21px/1.1 Raleway, Arial, sans-serif;
+						text-transform: uppercase;
+						color: #fff;
+						text-align: center;
+						padding-top: 4px;
+						& span {
+							font: 700 32px/.78 Raleway, Arial, sans-serif;
+							color: #fff;
+						}
+					}
+					& .item-title {
+						display: inline-block;
+						position: relative;
+						z-index: 100;
+						font: 700 20px/1.25 Raleway, Arial, sans-serif;
+						color: #fff;
+						margin: 205px 0 20px;
+					}
+					& .item-person {
+						position: relative;
+						z-index: 100;
+						font: 200 13px/1 Raleway, Arial, sans-serif;
 						color: #fff;
 					}
-				}
-				& .item-title {
-					position: relative;
-					z-index: 100;
-					font: 700 20px/1.25 Raleway, Arial, sans-serif;
-					color: #fff;
-					margin: 205px 0 20px;
-				}
-				& .item-person {
-					position: relative;
-					z-index: 100;
-					font: 200 13px/1 Raleway, Arial, sans-serif;
-					color: #fff;
-				}
-				& .overlay {
-					position: absolute;
-					width: 100%; height: 151px;
-					left: 0; bottom: 0;
-					background-image: linear-gradient(to top, #000000, transparent);
+					& .overlay {
+						position: absolute;
+						width: 100%; height: 151px;
+						left: 0; bottom: 0;
+						background-image: linear-gradient(to top, #000000, transparent);
+					}
 				}
 			}
 		}
