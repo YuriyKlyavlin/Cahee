@@ -62,7 +62,7 @@ li {
           transition: border-color .25s linear;
           padding-top: 4px;
           border-top: 3px solid transparent; }
-        .wrapper-header .header__nav .nav__item-link:hover {
+        .wrapper-header .header__nav .nav__item-link:hover, .wrapper-header .header__nav .nav__item-link:focus {
           padding-top: 4px;
           border-top: 3px solid #ff6033; }
 
